@@ -2,13 +2,28 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Hola Mundo Three.js</title>
+    <title>Experimentos Three.js</title>
     <style>
       body { margin: 0; overflow: hidden; }
       canvas { display: block; }
+
+      #titulo{
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        z-index: 10;
+        pointer-events: none;
+      }
     </style>
   </head>
   <body>
+    <h1 id="titulo">Experimentos ThreeJS</h1>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
