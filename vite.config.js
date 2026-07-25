@@ -11,6 +11,10 @@ export default defineConfig({
           __dirname,
           'experimentos/001-doble-cubo/index.html'
         ),
+        experimento002: resolve(
+          __dirname,
+          'experimentos/002-piso-triangulo/index.html'
+        ),
       },
     },
   },

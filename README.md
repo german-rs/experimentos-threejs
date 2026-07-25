@@ -15,7 +15,8 @@ Repositorio de práctica y experimentación con [Three.js](https://threejs.org/)
 | # | Nombre | Descripción | Estado |
 |---|--------|-------------|--------|
 | 000 | Hola Mundo | Cubo girando con luz direccional, cámara y loop de animación básico | ✅ |
-| 001 | Doble cubo | Agregar un segundo cubo de otro color, girando de forma independiente | 🔜 |
+| 001 | Doble cubo | Agregar un segundo cubo de otro color, girando de forma independiente | ✅ |
+| 002 | Piso y triángulo | Piso con PlaneGeometry, triángulo con ShapeGeometry girando sobre él | ✅ |
 
 *(Esta tabla se irá actualizando a medida que se agreguen nuevos experimentos.)*
 
