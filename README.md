@@ -8,15 +8,32 @@ Repositorio de práctica y experimentación con [Three.js](https://threejs.org/)
 
 - [Three.js](https://threejs.org/) — librería de gráficos 3D con WebGL
 - [Vite](https://vitejs.dev/) — bundler y servidor de desarrollo
-- Vanilla JavaScript
+- [React](https://react.dev/) — usado únicamente para la UI compartida (barra de navegación), independiente de la lógica de Three.js
+- JavaScript / JSX
+
+## Arquitectura
+
+Este repositorio combina dos enfoques de forma intencional, separando responsabilidades:
+
+- **Three.js en Vanilla JS**: cada experimento tiene su propio `main.js` con la lógica 3D (escena, cámara, geometrías, animación). No se usa `react-three-fiber`; Three.js corre de forma independiente en cada página.
+- **React solo para interfaz compartida**: la barra de navegación vive en un único componente (`src/components/Nav.jsx`) y se monta por separado en cada página mediante un archivo `main-nav*.jsx`. Esto evita duplicar el HTML de la navegación en cada experimento.
+- **Multi-página con Vite**: cada experimento es una página HTML independiente, registrada en `vite.config.js` (`build.rollupOptions.input`), no una sola SPA con rutas de cliente.
+- **Rutas dinámicas con `import.meta.env.BASE_URL`**: los enlaces de navegación se generan usando esta variable, para que funcionen igual en desarrollo local y en GitHub Pages (donde el sitio vive bajo `/experimentos-threejs/`).
+
+### Cómo agregar un experimento nuevo
+
+1. Crear `experimentos/00X-nombre/` con su `index.html` y `main.js` (lógica Three.js)
+2. Crear `src/main-nav-00X.jsx` (copiar uno existente y cambiar el valor de `activo`)
+3. Agregar una fila al array `experimentos` dentro de `src/components/Nav.jsx`
+4. Registrar el nuevo `index.html` en `vite.config.js` → `build.rollupOptions.input`
 
 ## Experimentos
 
 | # | Nombre | Descripción | Estado |
 |---|--------|-------------|--------|
 | 000 | Hola Mundo | Cubo girando con luz direccional, cámara y loop de animación básico | ✅ |
-| 001 | Doble cubo | Agregar un segundo cubo de otro color, girando de forma independiente | ✅ |
-| 002 | Piso y triángulo | Piso con PlaneGeometry, triángulo con ShapeGeometry girando sobre él | ✅ |
+| 001 | Doble cubo | Segundo cubo de otro color, girando de forma independiente | ✅ |
+| 002 | Piso y triángulo | Piso con `PlaneGeometry`, triángulo con `ShapeGeometry` girando sobre él | ✅ |
 
 *(Esta tabla se irá actualizando a medida que se agreguen nuevos experimentos.)*
 
