@@ -17,6 +17,10 @@ export default defineConfig({
           __dirname,
           'experimentos/002-piso-triangulo/index.html'
         ),
+        experimento003: resolve(
+          __dirname,
+          'experimentos/003-piso-plinto-esfera/index.html'
+        ),
       },
     },
   },
