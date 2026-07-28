@@ -34,6 +34,7 @@ Este repositorio combina dos enfoques de forma intencional, separando responsabi
 | 000 | Hola Mundo | Cubo girando con luz direccional, cámara y loop de animación básico | ✅ |
 | 001 | Doble cubo | Segundo cubo de otro color, girando de forma independiente | ✅ |
 | 002 | Piso y triángulo | Piso con `PlaneGeometry`, triángulo con `ShapeGeometry` girando sobre él | ✅ |
+| 003 | Piso, plinto y esfera | Composición tipo museo: piso, plinto con `CylinderGeometry` y esfera con sombras (`SpotLight`, shadow mapping) | ✅ |
 
 *(Esta tabla se irá actualizando a medida que se agreguen nuevos experimentos.)*
 
