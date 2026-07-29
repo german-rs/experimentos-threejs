@@ -9,18 +9,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        experimento001: resolve(
-          __dirname,
-          'experimentos/001-doble-cubo/index.html'
-        ),
-        experimento002: resolve(
-          __dirname,
-          'experimentos/002-piso-triangulo/index.html'
-        ),
-        experimento003: resolve(
-          __dirname,
-          'experimentos/003-piso-plinto-esfera/index.html'
-        ),
+        experimento001: resolve(__dirname, 'experimentos/001-doble-cubo/index.html'),
+        experimento002: resolve(__dirname, 'experimentos/002-piso-triangulo/index.html'),
+        experimento003: resolve(__dirname, 'experimentos/003-piso-plinto-esfera/index.html'),
+        experimento004: resolve(__dirname, 'experimentos/004-icosaedro-interactivo/index.html'),
       },
     },
   },
