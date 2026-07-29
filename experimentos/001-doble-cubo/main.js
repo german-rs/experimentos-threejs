@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-camera.position.z = 6;
+camera.position.z = 5;
 
 // 3. Renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -22,6 +22,7 @@ document.body.appendChild(renderer.domElement);
 // 4. Primer cubo (el original, desplazado a la izquierda)
 const geometry1 = new THREE.BoxGeometry(1, 1, 1);
 const material1 = new THREE.MeshStandardMaterial({ color: 0x00ffcc });
+
 const cube1 = new THREE.Mesh(geometry1, material1);
 cube1.position.x = -1.5;
 scene.add(cube1);

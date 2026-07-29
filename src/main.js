@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,                                   // plano cercano
   1000                                   // plano lejano
 );
-camera.position.z = 5;
+camera.position.z = 4;
 
 // 3. Renderer: dibuja la escena en un <canvas>
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -21,7 +21,9 @@ document.body.appendChild(renderer.domElement);
 
 // 4. Objeto: un cubo, el clásico "hola mundo" 3D
 const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshStandardMaterial({ color: 0x00ffcc });
+const material = new THREE.MeshStandardMaterial({ color: 0xff8c42 });
+
+
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
