@@ -1,67 +1,24 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Experimento 002 · Piso y Triángulo</title>
-    <style>
-      body { margin: 0; overflow: hidden; }
-      canvas { display: block; }
 
-      #titulo {
-        position: absolute;
-        top: 30px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 2rem;
-        z-index: 10;
-        pointer-events: none;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <title>Experimento 002 · Piso y Triángulo</title>
+  <script type="module" crossorigin src="/experimentos-threejs/assets/experimento002-CWrqEJQY.js"></script>
+  <link rel="modulepreload" crossorigin href="/experimentos-threejs/assets/Titulo-BxwR2MiC.js">
+  <link rel="stylesheet" crossorigin href="/experimentos-threejs/assets/Titulo-HtB3Ksxs.css">
+</head>
 
-            #nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 200px;
-        background: rgba(0, 0, 0, 0.6);
-        display: flex;
-        flex-direction: column;
-        padding-top: 80px;
-        box-sizing: border-box;
-        z-index: 20;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+<body>
+  <div id="titulo-root"></div>
+  <div id="nav-root"></div>
 
-      #nav a {
-        color: #ffffff;
-        text-decoration: none;
-        padding: 14px 20px;
-        font-size: 0.95rem;
-        border-left: 3px solid transparent;
-        transition: background 0.2s, border-color 0.2s;
-      }
+</body>
 
-      #nav a:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-left-color: #00ffcc;
-      }
-
-      #nav a.activo {
-        border-left-color: #00ffcc;
-        background: rgba(255, 255, 255, 0.05);
-      }
-    </style>
-    <script type="module" crossorigin src="/experimentos-threejs/assets/experimento002-CFqD_qFX.js"></script>
-    <link rel="modulepreload" crossorigin href="/experimentos-threejs/assets/Nav-CV-zuYEy.js">
-  </head>
-  <body>
-    <h1 id="titulo">Experimento 002 · Piso y Triángulo</h1>
-    
-    <div id="nav-root"></div>
-    
-  </body>
 </html>
