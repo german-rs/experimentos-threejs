@@ -1,0 +1,42 @@
+// Mixin de breakpoint móvil: evita repetir "@media (max-width: 768px)" a mano
+@mixin movil {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Mixin de marcas de esquina, estilo cruces de registro de un plano técnico
+@mixin marcas-esquina($color: var(--bp-blue-line), $tamano: 10px) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: $tamano;
+    height: $tamano;
+    border: 1px solid $color;
+  }
+
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+  }
+}
+
+// Mixin de grilla sutil tipo papel milimetrado
+@mixin grid-textura($color: var(--bp-grid-line), $paso: 24px) {
+  background-image:
+    linear-gradient($color 1px, transparent 1px),
+    linear-gradient(90deg, $color 1px, transparent 1px);
+  background-size: $paso $paso;
+}

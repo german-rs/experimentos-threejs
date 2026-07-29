@@ -1,6 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import Nav from './components/Nav.jsx';
+import Titulo from './components/Titulo.jsx';
 
-const contenedor = document.getElementById('nav-root');
-const root = createRoot(contenedor);
-root.render(<Nav activo="001" />);
+createRoot(document.getElementById('nav-root')).render(<Nav activo="001" />);
+
+createRoot(document.getElementById('titulo-root')).render(
+  <Titulo numero="001" nombre="Doble Cubo" />
+);

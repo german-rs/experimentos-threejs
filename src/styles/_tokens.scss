@@ -1,0 +1,14 @@
+// Paleta "blueprint" — plano técnico
+:root {
+  --bp-navy-900: #0a1a2f;   // fondo base
+  --bp-navy-800: #0f2540;   // paneles, nav
+  --bp-blue-line: #5b9bd5;  // líneas, bordes sólidos
+  --bp-grid-line: rgba(91, 155, 213, 0.08); // grilla sutil, muy tenue
+  --bp-cyan-bright: #7ec8e3; // títulos, estados activos
+  --bp-paper: #eef3f8;      // texto principal
+  --bp-accent: #ff8c42;     // acento tipo lápiz de grasa naranja
+  --bp-muted: #5f7a99;      // texto secundario, etiquetas
+
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-sans: 'IBM Plex Sans', Arial, sans-serif;
+}

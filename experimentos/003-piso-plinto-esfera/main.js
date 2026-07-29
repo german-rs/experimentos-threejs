@@ -1,8 +1,9 @@
 import * as THREE from 'three';
+import { getToken } from '/src/theme.js';
 
 // 1. Escena
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0d0d14); // más oscuro que los anteriores, ambiente de sala de museo
+scene.background = new THREE.Color(getToken('--bp-navy-900'));
 
 // 2. Cámara
 // La posicionamos baja y relativamente cerca, apuntando hacia la esfera (arriba).
@@ -93,7 +94,7 @@ scene.add(spotLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
-  esfera.rotation.y += 0.008;
+  esfera.rotation.x += 0.008;
 
   renderer.render(scene, camera);
 }

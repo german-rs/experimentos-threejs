@@ -1,4 +1,7 @@
+import { useState } from 'react';
+
 export default function Nav({ activo }) {
+  const [abierto, setAbierto] = useState(false);
   const base = import.meta.env.BASE_URL;
 
   const experimentos = [
@@ -8,17 +11,35 @@ export default function Nav({ activo }) {
     { id: '003', nombre: 'Piso, Plinto y Esfera', ruta: `${base}experimentos/003-piso-plinto-esfera/index.html` },
   ];
 
+  const alternarMenu = () => setAbierto(!abierto);
+  const cerrarMenu = () => setAbierto(false);
+
   return (
-    <nav id="nav">
-      {experimentos.map((exp) => (
-        <a
-          key={exp.id}
-          href={exp.ruta}
-          className={activo === exp.id ? 'activo' : ''}
-        >
-          {exp.id} · {exp.nombre}
-        </a>
-      ))}
-    </nav>
+    <>
+      <button
+        id="nav-toggle"
+        onClick={alternarMenu}
+        aria-label="Abrir menú de navegación"
+        aria-expanded={abierto}
+      >
+        {abierto ? '✕' : '☰'}
+      </button>
+
+      {abierto && <div id="nav-overlay" onClick={cerrarMenu}></div>}
+
+      <nav id="nav" className={abierto ? 'nav-abierto' : ''}>
+        <span className="nav-eyebrow">Índice</span>
+        {experimentos.map((exp) => (
+          <a
+            key={exp.id}
+            href={exp.ruta}
+            className={activo === exp.id ? 'activo' : ''}
+            onClick={cerrarMenu}
+          >
+            {exp.id} · {exp.nombre}
+          </a>
+        ))}
+      </nav>
+    </>
   );
 }

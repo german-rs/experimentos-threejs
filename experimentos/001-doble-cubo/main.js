@@ -1,8 +1,9 @@
 import * as THREE from 'three';
+import { getToken } from '/src/theme.js';
 
 // 1. Escena
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x1a1a2e);
+scene.background = new THREE.Color(getToken('--bp-navy-900'));
 
 // 2. Cámara
 const camera = new THREE.PerspectiveCamera(

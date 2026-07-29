@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bp-navy-900);
+  font-family: var(--font-sans);
+  color: var(--bp-paper);
+}
+
+canvas {
+  display: block;
+}

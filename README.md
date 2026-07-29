@@ -20,6 +20,8 @@ Este repositorio combina dos enfoques de forma intencional, separando responsabi
 - **Multi-página con Vite**: cada experimento es una página HTML independiente, registrada en `vite.config.js` (`build.rollupOptions.input`), no una sola SPA con rutas de cliente.
 - **Rutas dinámicas con `import.meta.env.BASE_URL`**: los enlaces de navegación se generan usando esta variable, para que funcionen igual en desarrollo local y en GitHub Pages (donde el sitio vive bajo `/experimentos-threejs/`).
 
+- **Sistema de diseño**: paleta y tipografía "blueprint" (IBM Plex Mono/Sans) definida en `src/styles/` con Sass — tokens en `_tokens.scss` (CSS custom properties), patrones reutilizables en `_mixins.scss` (breakpoint móvil, marcas de esquina), compilado en un único `main.scss` cargado por las 4 páginas.
+
 ### Cómo agregar un experimento nuevo
 
 1. Crear `experimentos/00X-nombre/` con su `index.html` y `main.js` (lógica Three.js)

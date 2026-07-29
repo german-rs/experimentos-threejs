@@ -1,8 +1,9 @@
 import * as THREE from 'three';
+import { getToken } from '/src/theme.js';
 
 // 1. Escena: el "contenedor" de todo lo que se va a renderizar
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x1a1a2e);
+scene.background = new THREE.Color(getToken('--bp-navy-900'));
 
 // 2. Cámara: define qué parte de la escena vemos
 const camera = new THREE.PerspectiveCamera(

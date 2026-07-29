@@ -1,0 +1,96 @@
+@use 'mixins';
+
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 220px;
+  background: var(--bp-navy-800);
+  border-left: 1px solid var(--bp-blue-line);
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  box-sizing: border-box;
+  z-index: 20;
+  font-family: var(--font-mono);
+}
+
+.nav-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--bp-muted);
+  text-transform: uppercase;
+  padding: 0 20px 10px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(91, 155, 213, 0.2);
+}
+
+#nav a {
+  color: var(--bp-muted);
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  border-left: 3px solid transparent;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+#nav a:hover {
+  background: rgba(126, 200, 227, 0.06);
+  border-left-color: var(--bp-blue-line);
+  color: var(--bp-paper);
+}
+
+#nav a.activo {
+  border-left-color: var(--bp-accent);
+  background: rgba(255, 140, 66, 0.08);
+  color: var(--bp-cyan-bright);
+}
+
+#nav-toggle {
+  display: none;
+}
+
+#nav-overlay {
+  display: none;
+}
+
+@include mixins.movil {
+  #nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--bp-blue-line);
+    background: var(--bp-navy-800);
+    color: var(--bp-cyan-bright);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  #nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 26, 47, 0.75);
+    z-index: 15;
+  }
+
+  #nav {
+    width: 240px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  #nav.nav-abierto {
+    transform: translateX(0);
+  }
+}
