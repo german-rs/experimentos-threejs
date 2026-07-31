@@ -10,7 +10,8 @@ Repositorio de práctica y experimentación con [Three.js](https://threejs.org/)
 - [Vite](https://vitejs.dev/) — bundler y servidor de desarrollo
 - [React](https://react.dev/) — usado únicamente para la UI compartida (barra de navegación), independiente de la lógica de Three.js
 - JavaScript / JSX
-- [React Three Fiber](https://r3f.docs.pmnd.rs/) + [Drei](https://github.com/pmndrs/drei) — usado puntualmente en el Experimento 004 en adelante, como alternativa declarativa a Three.js vanilla
+- [React Three Fiber](https://r3f.docs.pmnd.rs/) + [Drei](https://github.com/pmndrs/drei) — usado en el Experimento 004 en adelante, incluyendo carga de modelos animados (`useGLTF`, `useAnimations`)
+
 ## Arquitectura
 
 Este repositorio combina dos enfoques de forma intencional, separando responsabilidades:
@@ -38,6 +39,7 @@ Este repositorio combina dos enfoques de forma intencional, separando responsabi
 | 002 | Piso y triángulo | Piso con `PlaneGeometry`, triángulo con `ShapeGeometry` girando sobre él | ✅ |
 | 003 | Piso, plinto y esfera | Composición tipo museo: piso, plinto con `CylinderGeometry` y esfera con sombras (`SpotLight`, shadow mapping) | ✅ |
 | 004 | Icosaedro interactivo | Primer experimento con [React Three Fiber](https://r3f.docs.pmnd.rs/): icosaedro que cambia de color al clic (`useState`), `OrbitControls` de `@react-three/drei` | ✅ |
+| 005 | Personaje animado | Carga de modelo Mixamo (`.glb`) con [React Three Fiber](https://r3f.docs.pmnd.rs/): `useGLTF` + `useAnimations` de `@react-three/drei`, corrección de escala (cm → m) | ✅ |
 
 *(Esta tabla se irá actualizando a medida que se agreguen nuevos experimentos.)*
 

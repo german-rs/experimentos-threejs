@@ -10,6 +10,7 @@ export default function Nav({ activo }) {
     { id: '002', nombre: 'Piso y Triángulo', ruta: `${base}experimentos/002-piso-triangulo/index.html` },
     { id: '003', nombre: 'Piso, Plinto y Esfera', ruta: `${base}experimentos/003-piso-plinto-esfera/index.html` },
     { id: '004', nombre: 'Icosaedro Interactivo', ruta: `${base}experimentos/004-icosaedro-interactivo/index.html` },
+    { id: '005', nombre: 'Personaje Animado', ruta: `${base}experimentos/005-personaje-animado/index.html` },
   ];
 
   const alternarMenu = () => setAbierto(!abierto);
