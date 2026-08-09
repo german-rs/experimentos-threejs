@@ -14,6 +14,7 @@ export default defineConfig({
         experimento003: resolve(__dirname, 'experimentos/003-piso-plinto-esfera/index.html'),
         experimento004: resolve(__dirname, 'experimentos/004-icosaedro-interactivo/index.html'),
         experimento005: resolve(__dirname, 'experimentos/005-personaje-animado/index.html'),
+        experimento006: resolve(__dirname, 'experimentos/006-piso-texturizado-sombras/index.html'),
       },
     },
   },

@@ -53,6 +53,7 @@ Este repositorio combina dos enfoques de forma deliberada, para comparar en la p
 | 003 | Piso, plinto y esfera | Composición tipo museo: piso, plinto con `CylinderGeometry` y esfera con sombras (`SpotLight`, shadow mapping) | ✅ |
 | 004 | Icosaedro interactivo | Primer experimento con [React Three Fiber](https://r3f.docs.pmnd.rs/): icosaedro que cambia de color al clic (`useState`), `OrbitControls` de `@react-three/drei` | ✅ |
 | 005 | Personaje animado | Carga de modelo Mixamo (`.glb`) con [React Three Fiber](https://r3f.docs.pmnd.rs/): `useGLTF` + `useAnimations` de `@react-three/drei`, corrección de escala (cm → m) | ✅ |
+| 006 | Piso texturizado y sombras | Textura fotográfica con tiling (`useTexture`, `wrapS`/`wrapT`, `repeat`) y sombras completas en R3F (`Canvas shadows`, `castShadow`, `receiveShadow`) | ✅ |
 
 *(Esta tabla se irá actualizando a medida que se agreguen nuevos experimentos.)*
 
